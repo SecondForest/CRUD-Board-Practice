@@ -1,6 +1,7 @@
 package com.mysite.sbb.answer;
 
 import com.mysite.sbb.question.Question;
+import com.mysite.sbb.user.SiteUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,4 +26,6 @@ public class Answer {
   private LocalDateTime createDate;
 
   @ManyToOne private Question question;
+
+  @ManyToOne private SiteUser author;
 }
